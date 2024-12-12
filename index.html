@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimisasi Logistik Transportasi Darat</title>
+    <link rel="icon" href="Style/oplog icon.png">
+    <link rel="stylesheet" href="Style/Styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+    <link rel="stylesheet" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+</head>
+<body>
+    <header>
+        <h1>Optimisasi Logistik Transportasi Darat</h1>
+    </header>
+
+    <main>
+        <article>
+            <h2>Form Penghitungan</h2>
+            <br>
+            <form id="logisticsForm">
+                <label for="start">Lokasi Awal:</label>
+                <input type="text" id="start" name="start" placeholder="Contoh: -6.200000,106.816666" required>
+                <br>
+                <label for="destination">Lokasi Tujuan:</label>
+                <input type="text" id="destination" name="destination" placeholder="Contoh: -6.917464,107.609810" required>
+                <br>
+                <label for="cost">Biaya Per Km (Rp):</label>
+                <input type="number" id="cost" name="cost" required>
+                <br>
+                <label for="average_fuel">Rata-rata Bahan Bakar (km/L):</label>
+                <input type="number" id="average_fuel" name="average_fuel" required>
+                <br>
+                <label for="capacity">Kapasitas (Kg):</label>
+                <input type="number" id="capacity" name="capacity" required>
+                <br>
+                <button type="submit">Hitung</button>
+            </form>
+        </article>
+
+        <aside>
+            <h2>Peta</h2>
+            <div id="result"></div>
+            <div id="map"></div>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Optimisasi Logistik Transportasi Darat. Group Two Kalkulus Project.</p>
+    </footer>
+
+    <script src="js/Script.js" defer></script>
+</body>
+</html>

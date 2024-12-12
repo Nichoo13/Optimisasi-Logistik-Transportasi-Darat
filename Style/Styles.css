@@ -1,0 +1,207 @@
+/* Reset beberapa gaya default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Gaya umum untuk seluruh halaman */
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* Gaya untuk header */
+header {
+    background-color: #384b70;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+
+    position: sticky;
+    top: 0;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+/* Gaya untuk footer */
+footer {
+    background-color: #507687;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Gaya utama halaman */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Gaya untuk article yang berisi form */
+article {
+    flex: 1;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Gaya form */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input {
+    background-color: #dce4c975;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form input:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Button styling */
+form button {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    background-color: #677d6a;
+    color: white;
+    padding: 10px; /* Mengatur padding agar proporsional */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem; /* Ukuran teks */
+    width: auto; /* Lebar tombol mengikuti ukuran teks */
+    display: inline-block; /* Menjadikan tombol hanya sebesar teks dan padding */
+    text-align: center;
+}
+
+form button:hover {
+    background-color: #40534c;
+}
+
+aside {
+    flex: 1;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
+}
+
+/* Output (Aside) Styling */
+#result {
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#result strong {
+    color: #3498db;
+}
+
+/* Map container yang berada di kanan form */
+#map {
+    width: 100%;
+    height: 500px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    margin-top: 20px; /* Memberikan jarak antara form dan map */
+}
+
+/* Responsif untuk perangkat kecil (Tablet dan Handphone) */
+@media screen and (max-width: 1200px){
+    main{
+        flex-flow: column nowrap;
+    }
+    main aside{
+        align-self: center
+    }
+}
+@media screen and (max-width: 768px) {
+    nav ul{
+    justify-content: center;
+    }
+    main aside {
+        align-self: stretch;
+    }
+}
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.8rem; /* Menyesuaikan ukuran judul pada perangkat kecil */
+    }
+
+    main {
+        flex-direction: column; /* Mengubah layout menjadi kolom pada perangkat kecil */
+    }
+
+    form, #result, #map {
+        width: 100%; /* Full-width pada perangkat kecil */
+        margin-bottom: 20px; /* Memberikan jarak antar elemen */
+    }
+
+    #map {
+        height: 300px; /* Menyesuaikan tinggi map pada perangkat kecil */
+    }
+
+    footer p {
+        font-size: 0.9rem; /* Menyesuaikan ukuran teks footer pada perangkat kecil */
+    }
+}
+
+/* Responsif untuk perangkat lebih kecil (smartphone) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem; /* Lebih kecil untuk tampilan smartphone */
+    }
+
+    form button {
+        font-size: 1rem; /* Menyesuaikan ukuran font button pada perangkat kecil */
+    }
+
+    #map {
+        height: 250px; /* Menyesuaikan tinggi map pada perangkat lebih kecil */
+    }
+
+    footer p {
+        font-size: 0.8rem; /* Menyesuaikan ukuran footer pada perangkat kecil */
+    }
+}
